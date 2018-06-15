@@ -1,0 +1,74 @@
+html, body {
+    background: url('images/background.jpg') no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: fixed;
+    font-family: 'Nunito', sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.content {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+}
+
+.table {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table-wrapper:before {
+    content: '';
+    display: block;
+    background: url('images/katiiiiau.png');
+    background-size: cover;
+    height: 306px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.jogo td, .jogo th {
+    padding: 3px 5px;
+    text-align: center;
+}
+
+th {
+    padding: 10px 0;
+    background: #fff;
+}
+
+th:first-child { max-width: 100px}
+td:first-child { max-width: 100px}
+
+.jogo:nth-child(even) {
+    background: rgba(0,156,59,.9);
+}
+
+.jogo:nth-child(odd) {
+    background: rgba(255,223,0,.9);
+}
+
+.container {
+    width: 80%;
+    display: block;
+    margmin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+    .container { width: 95%; }
+}
+
+.developer {
+    font-family: 'comic-sans', 'helvetica';
+    text-decoration: none;
+    color: #fff;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
