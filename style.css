@@ -10,6 +10,10 @@ html, body {
     width: 100%;
 }
 
+.winner { color: green; }
+.looser { color: red; }
+.draw { color: orange; }
+
 .content {
     align-items: center;
     display: flex;
@@ -21,6 +25,8 @@ html, body {
     width: 100%;
     border-radius: 10px;
     overflow: hidden;
+    position: relative;
+    z-index: 9999;
 }
 
 .table-wrapper:before {
@@ -31,6 +37,7 @@ html, body {
     height: 306px;
     width: 300px;
     margin: 0 auto;
+    top: -20px;
 }
 
 .jogo td, .jogo th {
@@ -46,12 +53,16 @@ th {
 th:first-child { max-width: 100px}
 td:first-child { max-width: 100px}
 
-.jogo:nth-child(even) {
+/* .jogo:nth-child(even) {
     background: rgba(0,156,59,.9);
 }
 
 .jogo:nth-child(odd) {
     background: rgba(255,223,0,.9);
+} */
+
+.jogo {
+    background: rgba(255, 255, 255, .9)
 }
 
 .container {
@@ -71,4 +82,20 @@ td:first-child { max-width: 100px}
     position: absolute;
     top: 5px;
     left: 5px;
+}
+
+/* ERO REQUEST */
+
+.table-wrapper:before{
+    animation: bruno-animado .5s infinite alternate cubic-bezier(1, 0.18, 0.33, 0.79);
+}
+
+@keyframes bruno-animado{
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(20px);
+    }
 }
